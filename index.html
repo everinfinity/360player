@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>360 Video Player</title>
+    <style>
+      body {
+        margin: 0px;
+      }
+      .status-bar {
+        bottom: 30px;
+        width: 80%;
+        height: 10px;
+        border-radius: 1000px;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      .status-bar input {
+        width: 100%
+      }
+
+      .status-track {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: rgb(36, 135, 249);
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%) translateX(-50%);
+        left: 30%;
+        cursor: pointer;
+      }
+
+      .play-button {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateY(-50%) translateX(-50%);
+        opacity: 1;
+        transition-duration: 300ms;
+        cursor: pointer;
+        padding: 200px;
+      }
+
+      .mode-butotn {
+        position: absolute;
+        border: solid 2px white;
+        border-radius: 1000px;
+        color: white;
+        padding: 10px;
+        right: 20px;
+        top: 20px;
+        cursor: pointer;
+      }
+
+      .mode-typo {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        color: white;
+      }
+
+    </style>
+</head>
+
+<body>
+  <div id="stage" style="position: fixed; top: 0; bottom: 0; left: 0; right: 0;">
+    <div class="play-button" id="play_button">
+      <img src="https://www.freeiconspng.com/uploads/video-play-icon-7.png" width="50" alt="play/pause" />
+    </div>
+    <div class="status-bar" id="status_bar">
+      <input type="range" min="0" max="10000" id="status_progress" value="0" />
+      <!-- <div class="status-progress" id="status_progress"></div>
+      <div class="status-track" id="status_track"></div> -->
+    </div>
+    <div class="mode-butotn" id="mode_button">HD/4K</div>
+    <div class="mode-typo" id="mode_typo">HD Video</div>
+  </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="/player.js">
+    </script>
+
+</body>
+
+</html>
