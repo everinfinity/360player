@@ -11,7 +11,7 @@ app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "index.html"))
 })
 
-app.listen(5000, () => {
+app.listen(80, () => {
   console.log("running")
 })
 
